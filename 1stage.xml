@@ -7,9 +7,8 @@
 <Bg>kissbgr.jpg</Bg>
 <Character>
 
-<Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="barba.png" y="550" x="325"/>
-
-<Characterobj2 h="30" w="50" bullet="bearbullet.png" img="bear.png" y="550" x="325"/>
+<Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="bonobono.png" y="550" x="325"
+/>
 </Character>
 <Block>
 <Obj x="1410" y	="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
