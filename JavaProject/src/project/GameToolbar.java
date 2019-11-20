@@ -5,86 +5,88 @@ package project;
 //(powered by Fernflower decompiler)
 //
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JToolBar;
+import javax.swing.*;
 
-public class GameToolbar extends JToolBar {
+public class GameToolbar  {
  private String filePath;
 
  public GameToolbar(final BlockGameFrame bgf) {
-     JButton openBtn = new JButton(" Open ");
-     openBtn.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent event) {
-             JFileChooser chooser = new JFileChooser();
-             int ret = chooser.showOpenDialog(GameToolbar.this);
-             if (ret == 0) {
-                 String var4 = chooser.getSelectedFile().getPath();
+     final JMenuBar bar = new JMenuBar();
+
+     JMenu menu = new JMenu(" M E N U ");
+     JMenuItem pause = new JMenuItem(" P A U S E ");
+     JMenuItem start = new JMenuItem(" S T A R T ");
+
+     pause.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent arg0) {
+             bgf.audio.audioPause();
+             bar.requestFocus();
+             bgf.setTitle(" P A U S E ");
+             bgf.thread.pause();
+         }
+     });
+     start.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent arg0) {
+             bgf.audio.audioStart();
+             bgf.sp.getGamePanel().requestFocus();
+            bgf.setTitle(" R U N ");
+             bgf.thread.pause();
+         }
+     });
+     JMenuItem help = new JMenuItem(" H E L P ");
+     help.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent arg0) {
+             String help = "도움말입니다.\n이동은 좌, 우 방향키로 할 수 있습니다.\n공격은 'space bar'로 가능합니다.\n 매뉴를 누르시면 음소거 및 일시정지 기능이 있습니다.\n";
+             JOptionPane.showMessageDialog((Component)null, help, (String)null, -1);
+         }
+     });
+     JMenuItem mute = new JMenuItem(" M U T E ");
+     mute.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent arg0) {
+             bgf.isMute = !bgf.isMute;
+             if (bgf.isMute) {
+                 bgf.audio.audioPause();
+             } else {
+                 bgf.audio.audioStart();
              }
 
          }
      });
-     JButton exitBtn = new JButton(" Exit ");
-     exitBtn.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent event) {
+     JMenuItem exit = new JMenuItem(" E X I T ");
+
+     exit.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent arg0) {
              System.exit(0);
          }
      });
-     JButton rankingBtn = new JButton(" Ranking ");
-     rankingBtn.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent event) {
+     JMenuItem rank = new JMenuItem(" R A N K ");
+     rank.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent actionEvent) {
+
          }
      });
-     JLabel pauseLabel = new JLabel(" Pause ");
-     pauseLabel.addMouseListener(new MouseAdapter() {
-         String beforeTitle = bgf.getTitle();
+     menu.add(pause);
+     menu.addSeparator();
+     menu.add(start);
+     menu.addSeparator();
+     menu.add(mute);
+     menu.addSeparator();
+     menu.add(help);
+     menu.addSeparator();
+     menu.add(exit);
+     menu.addSeparator();
+     menu.add(rank);
+     menu.addSeparator();
+     bar.add(menu);
 
-         public void mouseEntered(MouseEvent arg0) {
-             bgf.setTitle(" Pause ");
-         }
 
-         public void mouseExited(MouseEvent arg0) {
-             bgf.setTitle(this.beforeTitle);
-         }
-     });
-     JButton upBtn = new JButton(" + ");
-     upBtn.setSize(30, 30);
-     JButton downBtn = new JButton(" -  ");
-     upBtn.setSize(30, 30);
-     JButton muteBtn = new JButton(" ⓧ ");
-     muteBtn.setSize(30, 30);
-     JButton helpBtn = new JButton(" help ");
-     this.add(openBtn);
-     this.addSeparator();
-     this.add(exitBtn);
-     this.addSeparator();
-     this.add(rankingBtn);
-     this.addSeparator();
-     this.add(pauseLabel);
-     this.addSeparator();
-     this.addSeparator();
-     this.add(upBtn);
-     this.add(muteBtn);
-     this.add(downBtn);
-     this.addSeparator();
-     this.addSeparator();
-     this.addSeparator();
-     this.addSeparator();
-     this.add(helpBtn);
-     this.addMouseListener(new MouseAdapter() {
-         public void mouseEntered(MouseEvent arg0) {
-             super.mouseEntered(arg0);
-         }
+    bgf.setJMenuBar(bar);
 
-         public void mouseExited(MouseEvent arg0) {
-             super.mouseExited(arg0);
-         }
-     });
-     this.setFloatable(false);
  }
 }

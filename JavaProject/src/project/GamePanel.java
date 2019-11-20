@@ -85,6 +85,12 @@ class GamePanel extends JPanel {
              } else if (e.getKeyCode() == 32) {
                  GamePanel.this.bullet = new Bullet(GamePanel.this.blockArr, GamePanel.this.character, GamePanel.this.gp, xml2, frame);
                  GamePanel.this.add(GamePanel.this.bullet);
+             } else if (e.getKeyCode()==KeyEvent.VK_DOWN){
+
+                 GamePanel.this.character.moveDown();
+             }
+             else if (e.getKeyCode()==KeyEvent.VK_UP){
+                 GamePanel.this.character.moveUp();
              }
 
          }
@@ -142,6 +148,12 @@ class GamePanel extends JPanel {
              } else if (e.getKeyCode() == 32) {
                  GamePanel.this.bullet = new Bullet(GamePanel.this.blockArr, GamePanel.this.character, GamePanel.this.gp);
                  GamePanel.this.add(GamePanel.this.bullet);
+             }else if (e.getKeyCode()==KeyEvent.VK_DOWN){
+
+                 GamePanel.this.character.moveDown();
+             }
+             else if (e.getKeyCode()==KeyEvent.VK_UP){
+                 GamePanel.this.character.moveUp();
              }
 
          }

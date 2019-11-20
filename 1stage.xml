@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<BlockGame>
+<Screen>
+<Size w="1920" h="1017"></Size>
+</Screen>
+<GamePanel>
+<Bg>kissbgr.jpg</Bg>
+<Character>
+
+<Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="bonobono.png" y="550" x="325"
+/>
+</Character>
+<Block>
+<Obj x="1410" y	="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1042" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1088" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1134" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1180" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1226" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1272" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="280" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="280" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1364" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="280" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="280" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1318" y="230" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="306" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="306" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="306" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="306" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="306" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="306" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="306" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="432" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="432" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="432" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="432" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="432" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="432" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="432" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1042" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="458" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="458" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="458" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="458" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="458" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1408" y="328" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1042" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="484" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="484" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="484" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1408" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1042" y="354" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1042" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="510" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1408" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1408" y="406" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="536" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="536" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="536" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="536" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="536" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="536" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="536" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="562" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="562" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="562" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="562" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="562" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="562" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="562" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="588" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="588" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="588" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="588" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="588" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="588" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="588" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="614" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="614" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="614" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="614" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="614" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="614" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="614" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="640" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="640" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="640" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="640" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="640" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="640" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="640" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="666" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="666" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="666" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="666" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="666" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="666" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="666" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1087" y="692" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1133" y="692" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1179" y="692" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1225" y="692" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1271" y="692" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1317" y="692" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+<Obj x="1363" y="692" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+</Block>
+</GamePanel>
+</BlockGame>
