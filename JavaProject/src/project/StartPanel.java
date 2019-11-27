@@ -21,25 +21,30 @@ class StartPanel extends JPanel {
  String id;
  private Image bg = (new ImageIcon("bgjpg.jpg")).getImage();
  GamePanel g;
+ JLabel startb;
 
  public StartPanel(BlockGameFrame frame, XMLReader xml, XMLReader xml2) {
      this.frame = frame;
      this.xml = xml;
      this.xml2 = xml2;
      this.setLayout((LayoutManager)null);
-     JLabel startb = new JLabel();
+     this.setSize(1920,1080);
+     this.startb = new JLabel();
      ImageIcon imageIcon = new ImageIcon((new ImageIcon("start.png")).getImage().getScaledInstance(frame.getWidth() / 4, frame.getHeight() / 8, 1));
-     startb.setIcon(imageIcon);
-     startb.setLocation(frame.getWidth() / 2 - frame.getWidth() / 8, frame.getHeight() / 2);
-     startb.setSize(frame.getWidth() / 4, frame.getHeight() / 8);
-     startb.addMouseListener(new StartPanel.MyMouseListener());
-     this.add(startb);
+     this.startb.setIcon(imageIcon);
+     this.startb.setLocation(frame.getWidth() / 2 - frame.getWidth() / 8, frame.getHeight() / 2);
+     System.out.println("log"+frame.getHeight());
+     this.startb.setSize(frame.getWidth() / 4, frame.getHeight() / 8);
+     this.startb.addMouseListener(new StartPanel.MyMouseListener());
+     this.add(this.startb);
  }
 
  public void paintComponent(Graphics g) {
      super.paintComponent(g);
      g.drawImage(this.bg, 0, 0, this.frame.getWidth(), this.frame.getHeight(), this);
+this.startb.setLocation(this.frame.getWidth()/2-this.frame.getWidth()/8,this.frame.getHeight()/2);
      System.out.println(this.frame.getWidth());
+
  }
 
  public GamePanel getGamePanel() {

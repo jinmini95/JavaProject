@@ -69,7 +69,7 @@ class GamePanel extends JPanel {
 
      this.timer.setSize(300, 50);
      this.timer.setFont(new Font("Times Roman", 2, 40));
-     this.timer.setLocation(800, 0);
+     this.timer.setLocation(this.frame.getWidth()/2, 0);
      this.add(this.timer);
      this.thread = new TimerThread(this.timer, 1000, "≈∏¿Ã∏”", this.limitTime, frame);
      frame.setThread(this.thread);
@@ -162,6 +162,7 @@ class GamePanel extends JPanel {
 
  public void paintComponent(Graphics g) {
      g.drawImage(this.bgImg.getImage(), 0, 0, this.getWidth(), this.getHeight(), this);
+     setSize(this.getWidth(),this.getHeight());
  }
 
  public void setThread(TimerThread thread) {

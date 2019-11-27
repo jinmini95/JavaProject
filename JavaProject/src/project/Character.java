@@ -19,8 +19,8 @@ class Character extends JLabel {
  Image ch = (new ImageIcon("bonobono.png")).getImage();
 
  public Character(ImageIcon icon) {
-     this.x = 900;
-     this.y = 900;
+     this.x = 700;
+     this.y = 500;
      this.setLocation(x, y);
      this.setSize(50, 100);
      if (icon != null) {
