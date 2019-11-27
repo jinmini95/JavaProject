@@ -33,7 +33,7 @@ class StartPanel extends JPanel {
      ImageIcon imageIcon = new ImageIcon((new ImageIcon("start.png")).getImage().getScaledInstance(frame.getWidth() / 4, frame.getHeight() / 8, 1));
      this.startb.setIcon(imageIcon);
      this.startb.setLocation(frame.getWidth() / 2 - frame.getWidth() / 8, frame.getHeight() / 2);
-     System.out.println("log"+frame.getHeight());
+
      this.startb.setSize(frame.getWidth() / 4, frame.getHeight() / 8);
      this.startb.addMouseListener(new StartPanel.MyMouseListener());
      this.add(this.startb);
@@ -44,8 +44,8 @@ class StartPanel extends JPanel {
      super.paintComponent(g);
      g.drawImage(this.bg, 0, 0, this.frame.getWidth(), this.frame.getHeight(), this);
 this.startb.setLocation(this.frame.getWidth()/2-this.frame.getWidth()/8,this.frame.getHeight()/2);
-     System.out.println(this.frame.getWidth());
-     System.out.println("½Ã¹ß"+this.frame.getHeight()+"°³°°³ß"+this.frame.getWidth());
+
+
  }
 
  public GamePanel getGamePanel() {

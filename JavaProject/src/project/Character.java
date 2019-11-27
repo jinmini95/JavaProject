@@ -20,7 +20,7 @@ class Character extends JLabel {
 
  public Character(ImageIcon icon,BlockGameFrame frame) {
      this.x = frame.getWidth()/2;
-     this.y = frame.getHeight()-frame.getHeight()/6;
+     this.y = frame.getHeight()-frame.getHeight()/5;
      this.setLocation(x, y);
      this.setSize(50, 100);
      if (icon != null) {

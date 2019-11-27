@@ -116,8 +116,8 @@ this.character=  new Character((ImageIcon)null,this.frame);
 
          if (node.getNodeType() == 1 && node.getNodeName().equals(XMLReader.E_OBJ)) {
 
-             int x = Integer.parseInt(XMLReader.getAttr(node, "x"))+frame.getWidth()*2/3;
-             int y = Integer.parseInt(XMLReader.getAttr(node, "y"))+frame.getHeight()*2/3;
+             int x = Integer.parseInt(XMLReader.getAttr(node, "x"))+frame.getWidth()-1297;
+             int y = Integer.parseInt(XMLReader.getAttr(node, "y"))+frame.getHeight()-737;
              int w = Integer.parseInt(XMLReader.getAttr(node, "w"));
              int h = Integer.parseInt(XMLReader.getAttr(node, "h"));
              int type = Integer.parseInt(XMLReader.getAttr(node, "type"));
@@ -139,6 +139,7 @@ this.character=  new Character((ImageIcon)null,this.frame);
      this.add(this.timer);
      this.thread = new TimerThread(this.timer, 1000, "≈∏¿Ã∏”", this.limitTime, frame);
      frame.setThread(this.thread);
+     this.character=  new Character((ImageIcon)null,frame);
      this.add(this.character);
      this.setFocusable(true);
      this.requestFocus();
