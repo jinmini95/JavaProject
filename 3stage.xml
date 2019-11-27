@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<BlockGame>
+<Screen>
+<Size w="1920" h="1017"></Size>
+</Screen>
+<GamePanel>
+<Bg>1225.jpg</Bg>
+<Block>
+<Obj x="293" y="37" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="320" y="67" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="357" y="127" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="270" y="67" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="257" y="127" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="219" y="127" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="307" y="127" w="50" h="30" img="block_green.jpg" type="1">
+	</Obj>
+	<Obj x="244" y="97" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="383" y="157" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="342" y="97" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="293" y="97" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="333" y="157" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="284" y="157" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="242" y="157" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="192" y="157" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="403" y="187" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="354" y="187" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="304" y="187" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="257" y="187" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="208" y="187" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="168" y="187" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="416" y="217" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="367" y="217" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="317" y="217" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="269" y="217" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="221" y="217" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="175" y="217" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="152" y="217" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="430" y="247" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="380" y="247" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="333" y="247" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="287" y="247" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="237" y="247" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="188" y="247" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="139" y="247" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="313" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="263" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="360" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="405" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="449" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="216" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="166" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="116" y="276" w="50" h="30" img="block_green.jpg" type="1"></Obj>
+	<Obj x="307" y="303" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="258" y="303" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="307" y="330" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="258" y="330" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="307" y="360" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="258" y="360" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="307" y="389" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="257" y="389" w="50" h="30" img="block_gift.jpg" type="1"></Obj>
+	<Obj x="604" y="84" w="50" h="30" img="block_yellow1.jpg" type="20"></Obj>
+	<Obj x="603" y="112" w="50" h="30" img="block_yellow1.jpg"
+		type="20">
+	</Obj>
+	<Obj x="555" y="112" w="50" h="30" img="block_yellow1.jpg"
+		type="20">
+	</Obj>
+	<Obj x="651" y="112" w="50" h="30" img="block_yellow1.jpg"
+		type="20">
+	</Obj>
+	<Obj x="628" y="142" w="50" h="30" img="block_yellow1.jpg"
+		type="20">
+	</Obj>
+	<Obj x="580" y="142" w="50" h="30" img="block_yellow1.jpg"
+		type="20">
+	</Obj>
+	<Obj x="641" y="172" w="50" h="30" img="block_yellow1.jpg"
+		type="20">
+	</Obj>
+	<Obj x="563" y="172" w="50" h="30" img="block_yellow1.jpg"
+		type="20">
+	</Obj>
+	<Obj x="406" y="389" w="50" h="30" img="block_blue.jpg" type="10"></Obj>
+	<Obj x="161" y="387" w="50" h="30" img="block_blue.jpg" type="10"></Obj>
+	<Obj x="489" y="390" w="50" h="30" img="block_blue.jpg" type="10">
+	</Obj>
+	<Obj x="81" y="387" w="50" h="30" img="block_blue.jpg" type="10"></Obj>
+</Block>
+	<Character>
+		<Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="barba.png" y="550" x="325"></Characterobj1>
+		<Characterobj2 h="30" w="50" bullet="bearbullet.png" img="bear.png" y="550" x="325"></Characterobj2></Character></GamePanel>
+</BlockGame>
