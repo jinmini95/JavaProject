@@ -4,26 +4,30 @@
         <Size w="1920" h="1017"></Size>
     </Screen>
     <GamePanel>
-        <Bg>kissbgr.jpg</Bg>
+        <Bg>bonobonoBg.jpg</Bg>
         <Character>
 
-            <Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="barba.png" y="550" x="325"/>
-
-            <Characterobj2 h="30" w="50" bullet="bearbullet.png" img="bear.png" y="550" x="325"/>
+            <Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="bonobono.png" y="550" x="325"
+            />
         </Character>
         <Block>
-            <Obj x="141" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="104" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="108" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="113" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="118" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="122" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="127" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="113" y="280" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="1179" y="280" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="1364" y="230" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="1271" y="280" w="25" h="15" img="block_yellow1.jpg" type="1"/>
-            <Obj x="1317" y="280" w="25" h="15" img="block_yellow1.jpg" type="1"/>
+            <Obj x="120" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="170" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="220" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="270" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="320" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="370" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="420" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="470" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="520" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="570" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="620" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="670" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="720" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="770" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="820" y="380" w="50" h="30" img="porori.png" type="1"/>
+            <Obj x="870" y="410" w="50" h="30" img="neoburi.png" type="1"/>
+            <Obj x="920" y="380" w="50" h="30" img="porori.png" type="1"/>
 
         </Block>
     </GamePanel>

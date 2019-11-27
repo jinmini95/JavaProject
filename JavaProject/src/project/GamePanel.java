@@ -19,7 +19,7 @@ import org.w3c.dom.NodeList;
 
 class GamePanel extends JPanel {
  private ImageIcon bgImg;
- private Character character = new Character((ImageIcon)null);
+ private Character character;
  XMLReader xml2;
  BlockGameFrame frame;
  private Bullet bullet;
@@ -49,8 +49,8 @@ class GamePanel extends JPanel {
      for(int i = 0; i < nodeList.getLength(); ++i) {
          Node node = nodeList.item(i);
          if (node.getNodeType() == 1 && node.getNodeName().equals(XMLReader.E_OBJ)) {
-             int x = Integer.parseInt(XMLReader.getAttr(node, "x"));
-             int y = Integer.parseInt(XMLReader.getAttr(node, "y"));
+             int x = Integer.parseInt(XMLReader.getAttr(node, "x"))+frame.getWidth()-1297;
+             int y = Integer.parseInt(XMLReader.getAttr(node, "y"))+frame.getHeight()-737;
              int w = Integer.parseInt(XMLReader.getAttr(node, "w"));
              int h = Integer.parseInt(XMLReader.getAttr(node, "h"));
              int type = Integer.parseInt(XMLReader.getAttr(node, "type"));
@@ -73,6 +73,7 @@ class GamePanel extends JPanel {
      this.add(this.timer);
      this.thread = new TimerThread(this.timer, 1000, "Å¸ÀÌ¸Ó", this.limitTime, frame);
      frame.setThread(this.thread);
+this.character=  new Character((ImageIcon)null,this.frame);
      this.add(this.character);
      this.setFocusable(true);
      this.requestFocus();
@@ -112,9 +113,11 @@ class GamePanel extends JPanel {
 
      for(int i = 0; i < nodeList.getLength(); ++i) {
          Node node = nodeList.item(i);
+
          if (node.getNodeType() == 1 && node.getNodeName().equals(XMLReader.E_OBJ)) {
-             int x = Integer.parseInt(XMLReader.getAttr(node, "x"));
-             int y = Integer.parseInt(XMLReader.getAttr(node, "y"));
+
+             int x = Integer.parseInt(XMLReader.getAttr(node, "x"))+frame.getWidth()*2/3;
+             int y = Integer.parseInt(XMLReader.getAttr(node, "y"))+frame.getHeight()*2/3;
              int w = Integer.parseInt(XMLReader.getAttr(node, "w"));
              int h = Integer.parseInt(XMLReader.getAttr(node, "h"));
              int type = Integer.parseInt(XMLReader.getAttr(node, "type"));

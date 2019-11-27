@@ -37,6 +37,7 @@ class StartPanel extends JPanel {
      this.startb.setSize(frame.getWidth() / 4, frame.getHeight() / 8);
      this.startb.addMouseListener(new StartPanel.MyMouseListener());
      this.add(this.startb);
+
  }
 
  public void paintComponent(Graphics g) {
@@ -44,7 +45,7 @@ class StartPanel extends JPanel {
      g.drawImage(this.bg, 0, 0, this.frame.getWidth(), this.frame.getHeight(), this);
 this.startb.setLocation(this.frame.getWidth()/2-this.frame.getWidth()/8,this.frame.getHeight()/2);
      System.out.println(this.frame.getWidth());
-
+     System.out.println("½Ã¹ß"+this.frame.getHeight()+"°³°°³ß"+this.frame.getWidth());
  }
 
  public GamePanel getGamePanel() {
