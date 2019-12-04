@@ -21,8 +21,9 @@ class Character extends JLabel {
 
  public Character(ImageIcon icon,BlockGameFrame frame) {
      this.frame=frame;
-     this.x = frame.getWidth()/2;
-     this.y = frame.getHeight()-frame.getHeight()/6;
+     System.out.println("¹¹°Ô"+this.frame.getWidth());
+     this.x = this.frame.getWidth()/2;
+     this.y = this.frame.getHeight()-frame.getHeight()/6;
      this.setLocation(x, y);
      this.setSize(50, 100);
      if (icon != null) {

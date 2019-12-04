@@ -19,7 +19,7 @@ import org.w3c.dom.NodeList;
 
 class GamePanel extends JPanel {
  private ImageIcon bgImg;
- XMLReader xml2;
+ XMLReader xml;
  BlockGameFrame frame;
     private Character character;
  private Bullet bullet;
@@ -28,15 +28,24 @@ class GamePanel extends JPanel {
  private int limitTime;
  private JLabel timer;
  private TimerThread thread;
+ public static int stageCount=1;
+static boolean flag = false;
+ Node gamePanelNode;
  int bcount;
- int bcount2;
 
- public GamePanel(Node gamePanelNode, final XMLReader xml2, final BlockGameFrame frame, int limit) {
+
+ public GamePanel(Node gamePanelNode, final XMLReader xml, final BlockGameFrame frame, int limit) {
+
      this.timer = new JLabel("Time : " + this.limitTime);
+    this.gamePanelNode=gamePanelNode;
      this.bcount = 0;
-     this.bcount2 = 0;
+     if(GamePanel.flag==false){
+this.requestFocus();
+
+     }
+     GamePanel.flag=false;
      this.frame = frame;
-     this.xml2 = xml2;
+     this.xml = xml;
      this.limitTime = limit;
      this.setLayout((LayoutManager)null);
      this.grabFocus();
@@ -84,7 +93,7 @@ class GamePanel extends JPanel {
              } else if (e.getKeyCode() == 39) {
                  GamePanel.this.character.moveRight();
              } else if (e.getKeyCode() == 32) {
-                 GamePanel.this.bullet = new Bullet(GamePanel.this.blockArr, GamePanel.this.character, GamePanel.this.gp, xml2, frame);
+                 GamePanel.this.bullet = new Bullet(GamePanel.this.blockArr, GamePanel.this.character, GamePanel.this.gp, frame);
                  GamePanel.this.add(GamePanel.this.bullet);
              } else if (e.getKeyCode()==KeyEvent.VK_DOWN){
 
@@ -98,69 +107,6 @@ class GamePanel extends JPanel {
      });
  }
 
- public GamePanel(Node gamePanelNode2, BlockGameFrame frame, int limit) {
-     this.timer = new JLabel("Time : " + this.limitTime);
-     this.bcount = 0;
-     this.bcount2 = 0;
-     this.setLayout((LayoutManager)null);
-     this.grabFocus();
-     Node bgNode = XMLReader.getNode(gamePanelNode2, XMLReader.E_BG);
-     String filePath = bgNode.getTextContent();
-     this.bgImg = new ImageIcon(filePath);
-     this.limitTime = limit;
-     Node blockNode = XMLReader.getNode(gamePanelNode2, XMLReader.E_BLOCK);
-     NodeList nodeList = blockNode.getChildNodes();
-
-     for(int i = 0; i < nodeList.getLength(); ++i) {
-         Node node = nodeList.item(i);
-         if (node.getNodeType() == 1 && node.getNodeName().equals(XMLReader.E_OBJ)) {
-             int x = Integer.parseInt(XMLReader.getAttr(node, "x"));
-             int y = Integer.parseInt(XMLReader.getAttr(node, "y"));
-             int w = Integer.parseInt(XMLReader.getAttr(node, "w"));
-             int h = Integer.parseInt(XMLReader.getAttr(node, "h"));
-             int type = Integer.parseInt(XMLReader.getAttr(node, "type"));
-             ImageIcon icon = null;
-             String imgFilePath = XMLReader.getAttr(node, "img");
-             if (imgFilePath != null) {
-                 icon = new ImageIcon(imgFilePath);
-             }
-
-             Block block = new Block(x, y, w, h, icon, type, this.gp);
-             this.add(block);
-             this.blockArr.add(block);
-         }
-     }
-
-     this.timer.setSize(300, 50);
-     this.timer.setFont(new Font("Times Roman", 2, 40));
-     this.timer.setLocation(800, 0);
-     this.add(this.timer);
-     this.thread = new TimerThread(this.timer, 1000, "Å¸ÀÌ¸Ó", this.limitTime, frame);
-     frame.setThread(this.thread);
-     this.character.setLocation(700+frame.getWidth()-1297,500+frame.getHeight()-737);
-     this.add(this.character);
-     this.setFocusable(true);
-     this.requestFocus();
-     this.addKeyListener(new KeyAdapter() {
-         public void keyPressed(KeyEvent e) {
-             if (e.getKeyCode() == 37) {
-                 GamePanel.this.character.moveLeft();
-             } else if (e.getKeyCode() == 39) {
-                 GamePanel.this.character.moveRight();
-             } else if (e.getKeyCode() == 32) {
-                 GamePanel.this.bullet = new Bullet(GamePanel.this.blockArr, GamePanel.this.character, GamePanel.this.gp);
-                 GamePanel.this.add(GamePanel.this.bullet);
-             }else if (e.getKeyCode()==KeyEvent.VK_DOWN){
-
-                 GamePanel.this.character.moveDown();
-             }
-             else if (e.getKeyCode()==KeyEvent.VK_UP){
-                 GamePanel.this.character.moveUp();
-             }
-
-         }
-     });
- }
 
  public void paintComponent(Graphics g) {
      g.drawImage(this.bgImg.getImage(), 0, 0, this.getWidth(), this.getHeight(), this);
@@ -173,5 +119,10 @@ class GamePanel extends JPanel {
 
  public TimerThread getThread() {
      return this.thread;
+ }
+ public void GetGamePanel(Node gamePanelNode){
+this.gamePanelNode=gamePanelNode;
+
+
  }
 }

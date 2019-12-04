@@ -14,6 +14,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import static project.GamePanel.stageCount;
+
 class Bullet extends JLabel implements Runnable {
  private int ballRadius = 10;
  private int ballX;
@@ -21,24 +23,17 @@ class Bullet extends JLabel implements Runnable {
  private int ballSpeedY = -20;
  private Thread th = new Thread(this);
  private Vector<Block> v;
- XMLReader xml2;
+ EndPanel ep;
  BlockGameFrame frame;
  GamePanel g2;
  private int x = 30;
  private GamePanel gamePanel;
+
+
  Image bu = (new ImageIcon("bu.png")).getImage();
 
- public Bullet(Vector<Block> v, Character c, GamePanel gp) {
-     this.setBounds(c.getX(), c.getY(), this.ballRadius * 2, this.ballRadius * 2);
-     this.ballX = c.getX() + c.getWidth() / 2;
-     this.ballY = c.getY();
-     this.v = v;
-     this.gamePanel = gp;
-     this.th.start();
- }
+ public Bullet(Vector<Block> v, Character c, GamePanel gp, BlockGameFrame frame) {
 
- public Bullet(Vector<Block> v, Character c, GamePanel gp, XMLReader xml2, BlockGameFrame frame) {
-     this.xml2 = xml2;
      this.frame = frame;
      this.setBounds(c.getX(), c.getY(), this.ballRadius * 2, this.ballRadius * 2);
      this.ballX = c.getX() + c.getWidth() / 2;
@@ -53,7 +48,11 @@ class Bullet extends JLabel implements Runnable {
          this.ballY += this.ballSpeedY;
          if (this.ballY + this.ballSpeedY < 0) {
              this.th.interrupt();
-             this.getParent().remove(this);
+try{        this.getParent().remove(this);}
+            catch(NullPointerException e){
+    return;
+            }
+
              this.revalidate();
              this.repaint();
              this.gamePanel.repaint();
@@ -73,15 +72,57 @@ class Bullet extends JLabel implements Runnable {
                      this.gamePanel.repaint();
                      --this.gamePanel.bcount;
                      if (this.gamePanel.bcount == 0) {
-                         this.gamePanel.getThread().killThread();
-                         String help = "STAGE CLEAR!!\n이번 단계는 너무 쉬웠죠?\n다음단계부터는 본격적으로\n어려워질꺼니 집중하시고\n이제 시~~작!!!!";
-                         JOptionPane.showMessageDialog((Component)null, help, (String)null, -1);
-                         this.g2 = new GamePanel(this.xml2.getGamePanelElement(), this.frame, 100);
-                         this.frame.setContentPane(this.g2);
+                         if(stageCount==1) {
+                        this.gamePanel.getThread().killThread();
+                             String help = "STAGE CLEAR!!\n이번 단계는 너무 쉬웠죠?\n다음단계부터는 본격적으로\n어려워질꺼니 집중하시고\n이제 시~~작!!!!";
+                         JOptionPane.showMessageDialog((Component) null, help, (String) null, -1);
+                         this.gamePanel = new GamePanel(BlockGameFrame.xml2.getGamePanelElement(), BlockGameFrame.xml2, this.frame, 100);
+                         this.frame.setContentPane(this.gamePanel);
                          this.frame.revalidate();
                          this.frame.repaint();
-                         this.g2.setFocusable(true);
-                         this.g2.requestFocus();
+                         this.gamePanel.setFocusable(true);
+                         this.gamePanel.requestFocus();
+                         GamePanel.flag=true;
+                         GamePanel.stageCount++;
+                     }
+                         else if(gamePanel.stageCount==2){
+                             this.gamePanel.getThread().killThread();
+                             String help = "STAGE CLEAR!!\n이번 단계는 너무 쉬웠죠?\n다음단계부터는 본격적으로\n어려워질꺼니 집중하시고\n홀리쉿";
+                             JOptionPane.showMessageDialog((Component)null, help, (String)null, -1);
+                             this.gamePanel=new GamePanel(BlockGameFrame.xml3.getGamePanelElement(),BlockGameFrame.xml3, this.frame, 100);
+                             this.frame.setContentPane(this.gamePanel);
+                             this.frame.revalidate();
+                             this.frame.repaint();
+                             this.gamePanel.setFocusable(true);
+                             this.gamePanel.requestFocus();
+                             GamePanel.flag=true;
+                             GamePanel.stageCount++;
+                         }
+                         else if(gamePanel.stageCount==3){
+                          this.gamePanel.getThread().killThread();
+                             String help = "STAGE CLEAR!!\n이번 단계는 너무 쉬웠죠?\n다음단계부터는 본격적으로\n어려워질꺼니 집중하시고\n홀리쉿";
+                             JOptionPane.showMessageDialog((Component)null, help, (String)null, -1);
+                             this.gamePanel=new GamePanel(BlockGameFrame.xml4.getGamePanelElement(),BlockGameFrame.xml4, this.frame, 100);
+                             this.frame.setContentPane(this.gamePanel);
+                             this.frame.revalidate();
+                             this.frame.repaint();
+                             this.gamePanel.setFocusable(true);
+                             this.gamePanel.requestFocus();
+                             GamePanel.flag=true;
+                             GamePanel.stageCount++;
+                         }
+                         else if(gamePanel.stageCount==4){
+                           this.gamePanel.getThread().killThread();
+                             String help = "STAGE CLEAR!!\n이번 단계는 너무 쉬웠죠?\n다음단계부터는 본격적으로\n어려워질꺼니 집중하시고\n홀리쉿";
+                             JOptionPane.showMessageDialog((Component)null, help, (String)null, -1);
+                             this.ep = new EndPanel(this.frame);
+                             this.frame.setContentPane(this.ep);
+                             this.frame.setResizable(false);
+                             this.setVisible(true);
+                             this.setFocusable(true);
+                             this.requestFocus();
+                             GamePanel.stageCount=1;
+                         }
                      }
                  } else {
                      ((Block)this.v.get(i)).minusCount();

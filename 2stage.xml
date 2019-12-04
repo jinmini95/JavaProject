@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="euc-kr" ?>
 <BlockGame>
-    <Screen>
-        <Size w="1920" h="1017"></Size>
-    </Screen>
-    <GamePanel>
-        <Bg>foodbgr.jpg</Bg>
-        <Character>
+<Screen>
+<Size w="1920" h="1017"></Size>
+</Screen>
+<GamePanel>
+<Bg>foodbgr.jpg</Bg>
+<Character>
 
-            <Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="barba.png" y="550" x="325"/>
+<Characterobj1 h="30" w="50" bullet="barbabullet.jpg" img="barba.png" y="550" x="325"/>
 
-            <Characterobj2 h="30" w="50" bullet="bearbullet.png" img="bear.png" y="550" x="325"/>
-        </Character>
-        <Block>
-            <Obj x="627" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="673" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="719" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="765" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="811" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="857" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="903" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="949" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-            <Obj x="995" y="302" w="50" h="30" img="block_yellow1.jpg" type="1"/>
-        </Block>
-    </GamePanel>
+<Characterobj2 h="30" w="50" bullet="bearbullet.png" img="bear.png" y="550" x="325"/>
+</Character>
+<Block>
+
+<Obj x="719" y="380" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+
+
+<Obj x="719" y="510" w="50" h="30" img="block_yellow1.jpg" type="1"/>
+
+   </Block>
+
+
+</GamePanel>
 </BlockGame>
