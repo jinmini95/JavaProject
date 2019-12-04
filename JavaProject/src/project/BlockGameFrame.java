@@ -19,7 +19,7 @@ public class BlockGameFrame extends JFrame {
  private XMLReader xml2 = new XMLReader(i+"stage.xml");
  StartPanel sp;
  private BlockGameFrame bgf;
- AudioEx audio = new AudioEx();
+// AudioEx audio = new AudioEx();
 boolean isMute = false;
  TimerThread thread;
 
@@ -41,6 +41,7 @@ boolean isMute = false;
      this.setVisible(true);
      this.setFocusable(true);
      this.requestFocus();
+
  }
 
  public StartPanel getStartPanel() {

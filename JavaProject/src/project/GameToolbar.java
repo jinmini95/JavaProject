@@ -24,7 +24,7 @@ public class GameToolbar  {
 
      pause.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent arg0) {
-             bgf.audio.audioPause();
+   //          bgf.audio.audioPause();
              bar.requestFocus();
              bgf.setTitle(" P A U S E ");
              bgf.thread.pause();
@@ -32,7 +32,7 @@ public class GameToolbar  {
      });
      start.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent arg0) {
-             bgf.audio.audioStart();
+      //       bgf.audio.audioStart();
              bgf.sp.getGamePanel().requestFocus();
             bgf.setTitle(" R U N ");
              bgf.thread.pause();
@@ -50,9 +50,9 @@ public class GameToolbar  {
          public void actionPerformed(ActionEvent arg0) {
              bgf.isMute = !bgf.isMute;
              if (bgf.isMute) {
-                 bgf.audio.audioPause();
+        //         bgf.audio.audioPause();
              } else {
-                 bgf.audio.audioStart();
+         //        bgf.audio.audioStart();
              }
 
          }

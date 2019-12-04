@@ -12,15 +12,17 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 class Character extends JLabel {
+    BlockGameFrame frame;
  private int x = 0;
  private int y = 0;
  private Image img = null;
  Bullet b;
  Image ch = (new ImageIcon("bonobono.png")).getImage();
 
- public Character(ImageIcon icon) {
-     this.x = 700;
-     this.y = 500;
+ public Character(ImageIcon icon,BlockGameFrame frame) {
+     this.frame=frame;
+     this.x = frame.getWidth()/2;
+     this.y = frame.getHeight()-frame.getHeight()/6;
      this.setLocation(x, y);
      this.setSize(50, 100);
      if (icon != null) {
